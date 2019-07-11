@@ -1,5 +1,5 @@
-Customer Contact Book
-=====================
+Contacts Book
+=============
 
 Learning full stack development using [laravel](https://laravel.com/)
 
