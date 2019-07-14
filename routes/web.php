@@ -1,4 +1,5 @@
 <?php
+use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,3 +19,15 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::post('/home/import', 'HomeController@import')->name('import');
+
+Route::get('/edit/{id}', 'HomeController@edit')->name('edit');
+
+Route::post('/edit/update/{id}', 'HomeController@update')->name('update');
+
+Route::get('/add', 'HomeController@add')->name('add');
+
+Route::post('/add/store', 'HomeController@store')->name('store');
+
+Route::post('/home/remove/{id}', 'HomeController@remove')->name('remove');
