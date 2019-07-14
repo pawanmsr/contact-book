@@ -1,0 +1,45 @@
+.user-table {
+    width: 100%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background: #ffffff;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 12px;
+    margin: 20px;
+}
+
+thead {
+    border-color: inherit;
+    vertical-align: middle;
+}
+
+tbody {
+    border-color: inherit;
+    vertical-align: middle;
+}
+
+th {
+    font-size: 14px;
+    font-weight: 400;
+    color: darkblue;
+    border-bottom: 2px solid blue;
+    padding: 10px 8px;
+}
+
+tr {
+    border-bottom: 1px solid #ddd;
+}
+
+tr:nth-child(even) {
+    background: #f2f2f2;
+}
+
+tr:hover .td-hover {
+    color: cornflowerblue;
+}
+
+td {
+    border-bottom: 1px solid #ccc;
+    color: dimgray;
+    padding: 6px 8px;
+}
