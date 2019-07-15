@@ -45,7 +45,7 @@ Predefined templates are available with [composer](https://getcomposer.org/) ins
 3. Create a new database and enter the credentials in *.env* file  
 4. Migrate tables to database `php artisan migrate --seed`  
 5. Run the project `php artisan serve --host=<YOUR IP> --port=<PORT>`  
-Get ip from network settings or use tools like **ipconfig**
+Get ip from network settings or use tools like **ipconfig**  
 The PORT can be any free port  
 
 Distribute IP:PORT for local network access
