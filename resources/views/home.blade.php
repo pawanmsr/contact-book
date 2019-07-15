@@ -18,15 +18,16 @@
                         <p>{{$message}}</p>
                     </div>
                     @endif
-                    <form action="{{ route('import') }}" method="POST" enctype="multipart/form-data">
+                    <form action="{{ route('userimport') }}" method="POST" enctype="multipart/form-data">
                         @csrf
                         <input type="file" name="file", accept=".csv">
                         <br>
                         <button class="btn import-btn"> Import CSV Data </button>
                     </form>
                     <div>
-                        <a href="{{route('add')}}" class="btn btn-primary">Add</a>
+                        <a href="{{route('useradd')}}" class="btn btn-primary">Add</a>
                     </div>
+                    <div class="scrollit">
                     <table class="user-table">
                         <thead>
                             <tr>
@@ -59,6 +60,7 @@
                             @endforeach
                         </tbody>
                     </table>
+                    </div>
 
                     {!! $data->links() !!}
                 </div>
@@ -66,19 +68,4 @@
         </div>
     </div>
 </div>
-
-<script>
-    $(document).ready(function(){
-        $(.remove).on('submit', function(){
-            if(confirm("Are you sure you want to delete record?"))
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-        });
-    });
-</script>
 @endsection

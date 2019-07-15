@@ -10,6 +10,8 @@
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
 
         <!-- Styles -->
+        <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
         <style>
             html, body {
                 background-color: #fff;
@@ -68,7 +70,13 @@
             @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
-                        <a href="{{ url('/home') }}">Home</a>
+                        @if (Auth::user()->role == 2)
+                            Admin <a href="{{ url('/adminhome') }}">Home</a>
+                        @elseif (Auth::user()->role == 1)
+                            Moderator <a href="{{ url('/moderatorhome') }}">Home</a>
+                        @else
+                            User <a href="{{ url('/home') }}">Home</a>
+                        @endif
                     @else
                         <a href="{{ route('login') }}">Login</a>
 
@@ -78,8 +86,12 @@
                     @endauth
                 </div>
             @endif
-
             <div class="content">
+                @if ($message = Session::get('failure'))
+                    <div class="alert alert-danger">
+                        <p>{{$message}}</p>
+                    </div>
+                @endif
                 <div class="title m-b-md">
                     Contacts Book
                 </div>
