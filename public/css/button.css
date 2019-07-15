@@ -6,26 +6,6 @@
     background-color: greenyellow;
 }
 
-.add-btn {
-    background-color: cadetblue;
-}
-
-.edit-btn {
-    background-color: sandybrown;
-}
-
-.edit-btn:hover {
-    background-color: tan;
-}
-
-.delete-btn {
-    background-color: orangered;
-}
-
-.delete-btn:hover {
-    background-color: tomato;
-}
-
 .btn {
     margin: 6px 8px 6px 0px;
     padding: 6px 10px 6px 10px;

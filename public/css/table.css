@@ -8,6 +8,10 @@
     margin: 20px;
 }
 
+.scrollit {
+    overflow: scroll;
+}
+
 thead {
     border-color: inherit;
     vertical-align: middle;
