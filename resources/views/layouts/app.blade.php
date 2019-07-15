@@ -39,6 +39,18 @@
 
                     </ul>
 
+                    <div>
+                        @auth
+                            @if (Auth::user()->role == 2)
+                                Admin
+                            @elseif (Auth::user()->role == 1)
+                                Moderator
+                            @else
+                                User
+                            @endif
+                        @endauth
+                    </div>
+
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
