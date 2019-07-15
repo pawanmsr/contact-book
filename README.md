@@ -38,4 +38,14 @@ TODO:
 Instuctions
 -----------
 
-TODO:
+To run on local server
+1. Clone repository `git clone https://github.com/pawanmsr/contacts-book.git`  
+2. Create a *.env* file to store credentials  
+Predefined templates are available with [composer](https://getcomposer.org/) installation  
+3. Create a new database and enter the credentials in *.env* file  
+4. Migrate tables to database `php artisan migrate --seed`  
+5. Run the project `php artisan serve --host=<YOUR IP> --port=<PORT>`  
+Get ip from network settings or use tools like **ipconfig**
+The PORT can be any free port  
+
+Distribute IP:PORT for local network access
