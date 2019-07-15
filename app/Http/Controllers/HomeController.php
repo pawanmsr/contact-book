@@ -99,6 +99,6 @@ class HomeController extends Controller
     {
         $contact = Contacts::find($id);
         $contact->delete();
-        return redirect()->route('home')->with('success', 'Record Deleted.');
+        return redirect()->route('home')->with('success', 'Record Deleted!');
     }
 }
