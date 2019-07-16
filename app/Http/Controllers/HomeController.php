@@ -38,8 +38,11 @@ class HomeController extends Controller
         // return view('home');
     }
 
-    public function import()
+    public function import(Request $request)
     {
+        $this->validate($request, [
+            'file' => 'required',
+        ]);
         Excel::import(new ImportCsv, request()->file('file'));
         return back();
     }
